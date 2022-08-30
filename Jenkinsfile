@@ -6,13 +6,13 @@ pipeline{
     stages{
         stage("Compile the source code")	{
             steps	{
-            bat "./mvnw compile"
+            bat "mvn compile"
             }
         }
       
 	stage("Package the application")	{
             steps	{
-            bat "./mvnw clean package -DskipTests"
+            bat "mvn clean package -DskipTests"
             }
         }
 	
